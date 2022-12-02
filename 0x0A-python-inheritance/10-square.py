@@ -1,26 +1,16 @@
 #!/usr/bin/python3
-# -*- coding: utf-8 -*-
-"""
-Created on Fri May 29 15:13:37 2020
-
-@author: Robinson Montes
-"""
+"""Module to inherit from BaseGeometry"""
 
 
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
-    """
-    A Square class shape, inheirts from Rectangle and BaseGeometry
-    """
-    def __init__(self, size):
-        """"
-        Init function for Square
+    """Class that creates a square"""
 
-        Attributes:
-            size (int): The size of the square
-        """
-        super().__init__(size, size)
-        self.integer_validator("size", size)
+    def __init__(self, size):
+        """Instantiation"""
+        super().integer_validator('size', size)
         self.__size = size
+        super().__init__(size, size)
