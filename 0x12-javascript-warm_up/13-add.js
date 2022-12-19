@@ -1,6 +1,3 @@
 #!/usr/bin/node
-//  returns the addition of 2 integers.
-
-exports.add = function (a, b) {
-  return a + b;
-};
+const add = require('./13-add').add;
+console.log(add(3, 5));
